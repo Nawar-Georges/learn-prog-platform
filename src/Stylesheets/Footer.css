@@ -1,0 +1,71 @@
+
+
+.footer-container{
+
+    display: grid;
+    grid-template-columns: 45% 10% 45%;
+    grid-template-areas: "about hr contact";
+    box-shadow: rgba(0, 0, 0, 0.132)  0 -10px 10px -5px ;
+    
+}
+
+.about-cont {
+    width: 100%;
+    text-align: center;
+    grid-area: "about";
+}
+
+.footer-hr{
+    grid-area: "hr";
+    border: 1px rgba(0, 0, 0, 0.258) solid;
+    /* border-radius: 100px; */
+}
+
+
+.contact-cont { 
+    grid-area: "contact";
+}
+
+.about-desc {
+    padding:10px;
+    margin:10px;
+}
+
+.footer-ulist li {
+    padding: 5px;
+    margin:5px;
+    margin-left: 30px;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+
+.footer-ulist li:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+.footer-h3 {
+    margin:15px;
+}
+
+
+@media (max-width: 640px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "about"
+            "hr"
+            "contact";
+        text-align: center;
+    }
+
+    .about-cont, .contact-cont {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .footer-hr {
+        margin: 20px 0;
+    }
+}
